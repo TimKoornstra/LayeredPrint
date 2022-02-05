@@ -1,4 +1,4 @@
-class LayeredPrinter():
+class LayeredPrinter:
     """
     A class to 'layer print' some values.
 
@@ -19,7 +19,7 @@ class LayeredPrinter():
         variables `self.i` and `self.c`.
     """
 
-    def __init__(self, indent:int=4, character:str=None):
+    def __init__(self, indent: int = 4, character: str = None):
         """
         Constructs all the necessary attributes for the person object.
 
@@ -34,7 +34,7 @@ class LayeredPrinter():
         self.i = indent
         self.c = character
 
-    def lprint(self, *args, layer:int=0, indent:int=None, character:str=None):
+    def lprint(self, *args, layer: int = 0, indent: int = None, character: str = None):
         """
         Print the `*args` with a prefix dependent on layer, indent and character.
         
@@ -58,7 +58,7 @@ class LayeredPrinter():
         ind = self.i if indent == None else indent
 
         if self.c == None and character == None:
-            prefix =  layer * ' |' + ' ├' + ind * '─' + ' '
+            prefix = layer * " |" + " ├" + ind * "─" + " "
         else:
             char = self.c if character == None else character
             prefix = layer * ind * char
@@ -66,18 +66,18 @@ class LayeredPrinter():
         out = prefix
         for arg in args:
             a = str(arg)
-            if '\n' not in a:
-                out += a + ' '
+            if "\n" not in a:
+                out += a + " "
             else:
-                new_lines = a.split('\n')
-                out += new_lines[0] + '\n'
+                new_lines = a.split("\n")
+                out += new_lines[0] + "\n"
                 for line in new_lines[1:]:
                     out += prefix + line
 
         print(out)
 
 
-def lprint(*args, layer:int=0, indent:int=4, character:str=None):
+def lprint(*args, layer: int = 0, indent: int = 4, character: str = None):
     """
         Print the `*args` with a prefix dependent on layer, indent and character.
         
@@ -98,18 +98,18 @@ def lprint(*args, layer:int=0, indent:int=4, character:str=None):
         None
     """
     if character == None:
-        prefix = prefix = layer * ' |' + ' ├' + indent * '─' + ' '
+        prefix = prefix = layer * " |" + " ├" + indent * "─" + " "
     else:
         prefix = layer * indent * character
 
     out = prefix
     for arg in args:
         a = str(arg)
-        if '\n' not in a:
-            out += a + ' '
+        if "\n" not in a:
+            out += a + " "
         else:
-            new_lines = a.split('\n')
-            out += new_lines[0] + '\n'
+            new_lines = a.split("\n")
+            out += new_lines[0] + "\n"
             for line in new_lines[1:]:
                 out += prefix + line
 
