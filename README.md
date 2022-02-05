@@ -1,4 +1,8 @@
 # Layered Printing in Python 3
+[![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-380/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![GPL-3.0](https://img.shields.io/github/license/TimKoornstra/LayeredPrint.svg?color=brightgreen)](https://opensource.org/licenses/GPL-3.0)
+
 This repository contains a module that helps you print in layers in Python 3.
 ## About the code
 Sometimes, when you're working in big files and want to test print a lot of things, it is useful to know where something might go wrong, or where in your code you are printing something. Using this module, you can either create a `LayeredPrinter` class or just use the `lprint` function directly. With this function, you can specify on what 'layer' or 'level' in your code, you are printing something.
