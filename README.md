@@ -12,8 +12,11 @@ The code contains a class with a function called `lprint`, as well as the loose 
 
 Small examples: 
 ```
-lprint('Example', layer=1, indent=2, character='.')
->> ..Example
+lprint('Example')
+>> ├──── Example
+
+lprint('Example 1', layer=1, indent=2, character='.')
+>> ..Example 1
 
 lprint('Example 2', layer=4, indent=4, character='-')
 >> ----------------Example 2
